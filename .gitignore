@@ -1,0 +1,24 @@
+# Generic
+.DS_Store
+node_modules/
+dist/
+build/
+.env
+.env.*
+__pycache__/
+*.pyc
+.coverage
+.cache/
+.idea/
+.vscode/
+
+# Python
+venv/
+*.egg-info/
+
+# React/Vite
+*.log
+
+# Docker
+*.pid
+
