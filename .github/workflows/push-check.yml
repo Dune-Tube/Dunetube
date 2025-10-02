@@ -10,18 +10,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Configure git
         run: |
           git config user.name "codex-bot"
           git config user.email "codex-bot@users.noreply.github.com"
-
       - name: Create test file
         run: |
           echo "$(date -Is) : hello from action" >> .codex-check
           git add .codex-check
           git commit -m "chore(ci): write .codex-check via GH Actions"
-
       - name: Push using GH_PAT
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
